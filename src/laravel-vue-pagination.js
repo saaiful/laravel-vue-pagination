@@ -32,7 +32,7 @@ module.exports = {
 			</a>\
 		</li>\
 		<li class="page-item pagination-page-nav" v-for="n in getPages()" :class="{ \'active\': n == data.current_page }">\
-			<a class="page-link" href="#" @click.prevent="selectPage(n)">{{ n }}</a>\
+			<a class="page-link" href="#" @click.prevent="selectPage(n)">{{ $n(n,\'decimal\') }}</a>\
 		</li>\
 		<li class="page-item pagination-next-nav" v-if="data.next_page_url">\
 			<a class="page-link" href="#" aria-label="Next" @click.prevent="selectPage(++data.current_page)">\
